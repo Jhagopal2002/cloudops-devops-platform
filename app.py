@@ -179,10 +179,4 @@ def system_information():
 # Ye code tabhi execute hoga jab hum directly
 # "python app.py" run karenge
 if __name__ == "__main__":
-
-    # Flask application ko port 5000 par start kar rahe hain
-    app.run(
-        host="0.0.0.0",
-        port=5000,
-        debug=True
-    )
+    app.run(host="0.0.0.0", port=5000)
