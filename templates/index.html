@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CloudOps System Monitor</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>CloudOps System Monitor</h1>
+            <p>Python & Flask based system monitoring application</p>
+        </header>
+
+        <section class="status-card">
+            <h2>Application Status</h2>
+            <span class="status">● Running</span>
+        </section>
+
+        <section class="info-grid">
+
+            <div class="card">
+                <h3>Operating System</h3>
+                <p>{{ system_info.operating_system }}</p>
+            </div>
+
+            <div class="card">
+                <h3>Python Version</h3>
+                <p>{{ system_info.python_version }}</p>
+            </div>
+
+            <div class="card">
+                <h3>Hostname</h3>
+                <p>{{ system_info.hostname }}</p>
+            </div>
+
+            <div class="card">
+                <h3>Disk Space</h3>
+                <p>
+                    {{ system_info.disk_free_gb }} GB free
+                    /
+                    {{ system_info.disk_total_gb }} GB
+                </p>
+            </div>
+                  <div class="card">
+               <h3>CPU Usage</h3>
+                 <p>{{ system_info.cpu_usage }}%</p>
+            </div>
+
+                <div class="card">
+                    <h3>Memory Usage</h3>
+                    <p>{{ system_info.memory_usage }}%</p>
+            </div>
+
+            <div class="card">
+            <h3>Disk Usage</h3>
+            <p>{{ system_info.disk_usage }}%</p>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>CloudOps System Monitor | Built with Python & Flask</p>
+                      <p>BY:- Gopal Jha</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
